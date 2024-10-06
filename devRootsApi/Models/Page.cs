@@ -9,9 +9,9 @@ namespace devRootsApi.Models
 
         public Page(PageDTO page)
         {
-            this.Title = page.Title;
-            this.SubtopicId = page.SubtopicId;
-            this.Content = page.Content;
+            Title = page.Title;
+            SubtopicId = page.SubtopicId;
+            Content = page.Content;
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }

@@ -1,6 +1,4 @@
 ﻿using devRootsApi.DTOs;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.Build.Framework;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -12,8 +10,8 @@ namespace devRootsApi.Models
 
         public Subtopic(SubtopicDTO subtopic)
         {
-            this.Title = subtopic.Title;
-            this.TopicId = subtopic.TopicId;
+            Title = subtopic.Title;
+            TopicId = subtopic.TopicId;
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }

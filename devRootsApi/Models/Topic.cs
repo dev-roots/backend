@@ -10,7 +10,7 @@ namespace devRootsApi.Models
 
         public Topic(TopicDTO topic)
         {
-            this.Title = topic.Title;
+            Title = topic.Title;
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }
