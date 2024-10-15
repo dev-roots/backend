@@ -1,5 +1,5 @@
 using devRootsApi.Models;
-using Microsoft.AspNetCore.Identity;
+using devRootsApi.Seeds;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,17 +15,10 @@ namespace devRootsApi.Data
 
         protected override void OnModelCreating (ModelBuilder modelBuilder)
         {
-            // Seed data
-            List<IdentityRole> roles = new()
-            {
-                new IdentityRole{ Name = "User", NormalizedName = "USER" },
-                new IdentityRole{ Name = "Admin", NormalizedName = "ADMIN" },
-                new IdentityRole{ Name = "Blogger", NormalizedName = "BLOGGER" },
-            };
-
-            modelBuilder.Entity<IdentityRole>().HasData(roles);
-
             base.OnModelCreating(modelBuilder);
+                
+            // Seed models
+            UserSeed.SeedAdmin(modelBuilder);
         }
     }
 }

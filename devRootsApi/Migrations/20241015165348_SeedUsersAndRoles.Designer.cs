@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using devRootsApi.Data;
 
@@ -11,9 +12,11 @@ using devRootsApi.Data;
 namespace devRootsApi.Migrations
 {
     [DbContext(typeof(DevRootContext))]
-    partial class DevRootContextModelSnapshot : ModelSnapshot
+    [Migration("20241015165348_SeedUsersAndRoles")]
+    partial class SeedUsersAndRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
