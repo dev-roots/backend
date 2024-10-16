@@ -16,6 +16,26 @@ namespace devRootsApi.DTOs
         public string Password { get; set; }
     }
 
+    public class UserDto
+    {
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "The username must be at least between 3 and 50 characters")]
+        public string Username { get; set; }
+        
+        [EmailAddress]
+        public string Email { get; set; }
+
+        public string ProfilePicture { get; set; }
+    }
+
+    public class UserPasswordDto
+    {
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "RepeatedPassword is required")]
+        public string RepeatedPassword { get; set; }
+    }
+
     public class UserAuthenticateDTO
     {
         [Required(ErrorMessage = "Email or username is required")]

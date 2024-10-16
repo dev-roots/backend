@@ -53,6 +53,7 @@ namespace devRootsApi.Controllers
                         var authClaims = new List<Claim>
                         {
                             new(ClaimTypes.Name, user.UserName),
+                            new(ClaimTypes.Email, user.Email),
                             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                         };
 
